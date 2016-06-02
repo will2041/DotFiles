@@ -1,0 +1,33 @@
+[user]
+	email = <<EMAIL>>
+	name = Will Voorhees
+[color]
+	ui = auto
+[core]
+	pager = less -FMRiX
+	excludesfile = /home/voorhees/.gitignore_global
+[push]
+	default = simple
+[alias]
+
+[alias]
+        lol = log --graph --decorate --pretty=oneline --abbrev-commit
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset' --abbrev-commit --date=relative
+        dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(bold blue)\"%cn\" <%ce>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+        lp = log -p -c
+        wc = whatchanged -m --name-status
+        st = status
+        br = branch
+        ch = checkout
+        co = checkout
+        cam = commit -am
+        last = cat-file commit HEAD
+        l = "log --pretty=format:'%h %ad  %s%x09%ae' --date=short"
+        # In case autosetuprebase was not on
+        sync = pull --rebase
+        unadd = reset HEAD
+        uncommit = git reset --soft HEAD@{1}
+[amazon]
+	append-cr-url = true
+	pull-request-by-default = true
